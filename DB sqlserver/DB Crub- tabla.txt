@@ -1,0 +1,44 @@
+Create database Crud
+CREATE TABLE dbo.tabla (
+  Id int IDENTITY(1, 1) NOT NULL,
+  Nombre varchar(50) COLLATE Modern_Spanish_CI_AS NULL,
+  Correo varchar(50) COLLATE Modern_Spanish_CI_AS NULL,
+  Fecha_nacimiento datetime NULL,
+  PRIMARY KEY CLUSTERED (Id)
+    WITH (
+      PAD_INDEX = OFF, IGNORE_DUP_KEY = OFF, STATISTICS_NORECOMPUTE = OFF,
+      ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON)
+)
+ON [PRIMARY]
+GO
+========================================================
+
+========================================================
+Create database Crud_Evolution2022
+CREATE TABLE dbo.tabla (
+  UsuId int IDENTITY(1, 1) NOT NULL,
+  UsuNombre varchar(50) COLLATE Modern_Spanish_CI_AS NULL,
+  UsuPASS varchar(50) COLLATE Modern_Spanish_CI_AS NULL
+  PRIMARY KEY CLUSTERED (UsuId)
+    WITH (
+      PAD_INDEX = OFF, IGNORE_DUP_KEY = OFF, STATISTICS_NORECOMPUTE = OFF,
+      ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON)
+)
+ON [PRIMARY]
+GO
+
+CREATE TABLE dbo.USUARIOS (
+  UsuId int IDENTITY(1, 1) NOT NULL,
+  UsuNombre varchar(50) COLLATE Modern_Spanish_CI_AS NULL,
+  UsuPASS varchar(50) COLLATE Modern_Spanish_CI_AS NULL
+  PRIMARY KEY CLUSTERED (UsuId)
+    WITH (
+      PAD_INDEX = OFF, IGNORE_DUP_KEY = OFF, STATISTICS_NORECOMPUTE = OFF,
+      ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON)
+)
+ON [PRIMARY]
+GO
+
+========================================================
+
+========================================================

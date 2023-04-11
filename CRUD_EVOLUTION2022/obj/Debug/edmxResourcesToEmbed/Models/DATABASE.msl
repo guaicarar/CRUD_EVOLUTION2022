@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="CRUD_EVOLUTION2022Model1StoreContainer" CdmEntityContainer="CRUD_EVOLUTION2022Entities1">
+    <EntitySetMapping Name="PEDIDO">
+      <EntityTypeMapping TypeName="CRUD_EVOLUTION2022Model1.PEDIDO">
+        <MappingFragment StoreEntitySet="PEDIDO">
+          <ScalarProperty Name="PedID" ColumnName="PedID" />
+          <ScalarProperty Name="PedUsu" ColumnName="PedUsu" />
+          <ScalarProperty Name="PedProd" ColumnName="PedProd" />
+          <ScalarProperty Name="PedVrUnit" ColumnName="PedVrUnit" />
+          <ScalarProperty Name="Pedcant" ColumnName="Pedcant" />
+          <ScalarProperty Name="PepSubTot" ColumnName="PepSubTot" />
+          <ScalarProperty Name="PedIVA" ColumnName="PedIVA" />
+          <ScalarProperty Name="Pedtotal" ColumnName="Pedtotal" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PRODUCTO">
+      <EntityTypeMapping TypeName="CRUD_EVOLUTION2022Model1.PRODUCTO">
+        <MappingFragment StoreEntitySet="PRODUCTO">
+          <ScalarProperty Name="ProID" ColumnName="ProID" />
+          <ScalarProperty Name="ProDesc" ColumnName="ProDesc" />
+          <ScalarProperty Name="ProValor" ColumnName="ProValor" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="USUARIOS">
+      <EntityTypeMapping TypeName="CRUD_EVOLUTION2022Model1.USUARIOS">
+        <MappingFragment StoreEntitySet="USUARIOS">
+          <ScalarProperty Name="UsuID" ColumnName="UsuID" />
+          <ScalarProperty Name="UsuNombre" ColumnName="UsuNombre" />
+          <ScalarProperty Name="UsuPass" ColumnName="UsuPass" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

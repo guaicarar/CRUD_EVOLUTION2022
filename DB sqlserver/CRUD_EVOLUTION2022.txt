@@ -1,0 +1,120 @@
+-- SQL Manager Lite for SQL Server 5.0.4.54454
+-- ---------------------------------------
+-- Host      : LAPTOP-SSCIBUHD\SQLEXPRESS
+-- Database  : CRUD_EVOLUTION2022
+-- Version   : Microsoft SQL Server 2019 (RTM-GDR) (KB5014356) 15.0.2095.3
+
+
+--
+-- Definition for table PEDIDO : 
+--
+
+CREATE TABLE dbo.PEDIDO (
+  PedID int NOT NULL,
+  PedUsu int NULL,
+  PedProd int NULL,
+  PedVrUnit money NULL,
+  Pedcant float NULL,
+  PepSubTot money NULL,
+  PedIVA float NULL,
+  Pedtotal money NULL,
+  PRIMARY KEY CLUSTERED (PedID)
+    WITH (
+      PAD_INDEX = OFF, IGNORE_DUP_KEY = OFF, STATISTICS_NORECOMPUTE = OFF,
+      ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON)
+)
+ON [PRIMARY]
+GO
+
+--
+-- Definition for table PRODUCTO : 
+--
+
+CREATE TABLE dbo.PRODUCTO (
+  ProID int NOT NULL,
+  ProDesc varchar(50) COLLATE Modern_Spanish_CI_AS NULL,
+  ProValor money NULL,
+  PRIMARY KEY CLUSTERED (ProID)
+    WITH (
+      PAD_INDEX = OFF, IGNORE_DUP_KEY = OFF, STATISTICS_NORECOMPUTE = OFF,
+      ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON)
+)
+ON [PRIMARY]
+GO
+
+--
+-- Definition for table USUARIOS : 
+--
+
+CREATE TABLE dbo.USUARIOS (
+  UsuID int IDENTITY(1, 1) NOT NULL,
+  UsuNombre varchar(20) COLLATE Modern_Spanish_CI_AS NULL,
+  UsuPass varchar(20) COLLATE Modern_Spanish_CI_AS NULL,
+  PRIMARY KEY CLUSTERED (UsuID)
+    WITH (
+      PAD_INDEX = OFF, IGNORE_DUP_KEY = OFF, STATISTICS_NORECOMPUTE = OFF,
+      ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON)
+)
+ON [PRIMARY]
+GO
+
+--
+-- Data for table dbo.USUARIOS  (LIMIT 0,500)
+--
+
+SET IDENTITY_INSERT dbo.USUARIOS ON
+GO
+
+INSERT INTO dbo.USUARIOS (UsuID, UsuNombre, UsuPass)
+VALUES 
+  (1, N'1', N'1')
+GO
+
+INSERT INTO dbo.USUARIOS (UsuID, UsuNombre, UsuPass)
+VALUES 
+  (2, N'NUEVO', N'NUEVO22')
+GO
+
+INSERT INTO dbo.USUARIOS (UsuID, UsuNombre, UsuPass)
+VALUES 
+  (3, N'123', N'456')
+GO
+
+INSERT INTO dbo.USUARIOS (UsuID, UsuNombre, UsuPass)
+VALUES 
+  (4, N'ramon12', N'ramon123')
+GO
+
+INSERT INTO dbo.USUARIOS (UsuID, UsuNombre, UsuPass)
+VALUES 
+  (5, N'dfdfd', N'dfdfd')
+GO
+
+INSERT INTO dbo.USUARIOS (UsuID, UsuNombre, UsuPass)
+VALUES 
+  (6, N'Prueba', N'Prueba123')
+GO
+
+INSERT INTO dbo.USUARIOS (UsuID, UsuNombre, UsuPass)
+VALUES 
+  (7, N'Adela', N'53años')
+GO
+
+INSERT INTO dbo.USUARIOS (UsuID, UsuNombre, UsuPass)
+VALUES 
+  (8, N'NUEVO', N'sdsdsds')
+GO
+
+INSERT INTO dbo.USUARIOS (UsuID, UsuNombre, UsuPass)
+VALUES 
+  (9, N'12', N'12')
+GO
+
+INSERT INTO dbo.USUARIOS (UsuID, UsuNombre, UsuPass)
+VALUES 
+  (10, N'we', N'we')
+GO
+
+SET IDENTITY_INSERT dbo.USUARIOS OFF
+GO
+

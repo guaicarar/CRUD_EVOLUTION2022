@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CRUD_EVOLUTION2022Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="PEDIDO">
+    <Key>
+      <PropertyRef Name="PedID" />
+    </Key>
+    <Property Name="PedID" Type="int" Nullable="false" />
+    <Property Name="PedUsu" Type="int" />
+    <Property Name="PedProd" Type="int" />
+    <Property Name="PedVrUnit" Type="money" />
+    <Property Name="Pedcant" Type="float" />
+    <Property Name="PepSubTot" Type="money" />
+    <Property Name="PedIVA" Type="float" />
+    <Property Name="Pedtotal" Type="money" />
+  </EntityType>
+  <EntityType Name="PRODUCTO">
+    <Key>
+      <PropertyRef Name="ProID" />
+    </Key>
+    <Property Name="ProID" Type="int" Nullable="false" />
+    <Property Name="ProDesc" Type="varchar" MaxLength="50" />
+    <Property Name="ProValor" Type="money" />
+  </EntityType>
+  <EntityType Name="USUARIOS">
+    <Key>
+      <PropertyRef Name="UsuID" />
+    </Key>
+    <Property Name="UsuID" Type="int" Nullable="false" />
+    <Property Name="UsuNombre" Type="int" />
+    <Property Name="UsuPass" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityContainer Name="CRUD_EVOLUTION2022ModelStoreContainer">
+    <EntitySet Name="PEDIDO" EntityType="Self.PEDIDO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PRODUCTO" EntityType="Self.PRODUCTO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="USUARIOS" EntityType="Self.USUARIOS" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

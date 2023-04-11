@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CRUD_EVOLUTION2022Model1" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="PEDIDO">
+    <Key>
+      <PropertyRef Name="PedID" />
+    </Key>
+    <Property Name="PedID" Type="Int32" Nullable="false" />
+    <Property Name="PedUsu" Type="Int32" />
+    <Property Name="PedProd" Type="Int32" />
+    <Property Name="PedVrUnit" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="Pedcant" Type="Double" />
+    <Property Name="PepSubTot" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="PedIVA" Type="Double" />
+    <Property Name="Pedtotal" Type="Decimal" Precision="19" Scale="4" />
+  </EntityType>
+  <EntityType Name="PRODUCTO">
+    <Key>
+      <PropertyRef Name="ProID" />
+    </Key>
+    <Property Name="ProID" Type="Int32" Nullable="false" />
+    <Property Name="ProDesc" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ProValor" Type="Decimal" Precision="19" Scale="4" />
+  </EntityType>
+  <EntityType Name="USUARIOS">
+    <Key>
+      <PropertyRef Name="UsuID" />
+    </Key>
+    <Property Name="UsuID" Type="Int32" Nullable="false" />
+    <Property Name="UsuNombre" Type="Int32" />
+    <Property Name="UsuPass" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="CRUD_EVOLUTION2022Entities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="PEDIDO" EntityType="Self.PEDIDO" />
+    <EntitySet Name="PRODUCTO" EntityType="Self.PRODUCTO" />
+    <EntitySet Name="USUARIOS" EntityType="Self.USUARIOS" />
+  </EntityContainer>
+</Schema>

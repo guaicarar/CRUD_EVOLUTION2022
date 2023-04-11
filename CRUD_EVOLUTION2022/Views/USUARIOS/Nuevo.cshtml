@@ -1,0 +1,24 @@
+﻿@model CRUD_EVOLUTION2022.Models.ViewModel.NuevoUsuariosWiewModels
+@{
+    ViewBag.Title = "Nuevo";
+}
+
+<h2>Nuevo Datos Usuarios</h2>
+
+@using (Html.BeginForm("Nuevo","USUARIOS",FormMethod.Post))
+
+{
+    <div class=" row">
+        <div class="col-md-12">
+            
+            @Html.LabelFor(d => d.UsuNombre)
+            @Html.TextBoxFor(d => d.UsuNombre, "", new { @class = "form-control" })
+            @Html.LabelFor(d => d.UsuPASS)
+            @Html.TextBoxFor(d => d.UsuPASS, "", new { @class = "form-control" })
+
+            <div claas="row" style="text-align:right;padding:5px;">
+                <input value="Guardar" class="btn btn-primary" type="submit" />
+            </div>
+        </div>
+    </div>
+}
